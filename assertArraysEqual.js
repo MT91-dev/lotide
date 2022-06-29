@@ -17,6 +17,7 @@ const assertArraysEqual = (array1, array2) => {
     // console.log(failedIndex);
   }
   eqArrays(array1, array2);
+  
   if (perfectMatch) {
     console.log(`✅ Assertion Passed: ${array1} === ${array2}`);
   } else {
