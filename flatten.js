@@ -32,7 +32,7 @@ const flatten = (nestedArray) => {
   for (let i = 0; i < nestedArray.length; i++) {
     if (!Array.isArray(nestedArray[i])) {
       flattenedArray.push(nestedArray[i]);
-    } else if (Array.isArray(nestedArray[i])) {
+    } else {
       for (let j = 0; j < nestedArray[i].length; j++) {
         flattenedArray.push(nestedArray[i][j]);
       }
