@@ -10,18 +10,12 @@ const assertEqual = (actual, expected) => {
 
 //Function below takes an array as variable arr and returns the tail of the array
 const tail = (arr) => {
-  //locally scoped variable tailArray is declared
-  let tailArray;
-  if (arr.length === 0) { //if arr has no elements, tailArray is assigned as an empty array
-    tailArray = [];
-  } else if (arr.length === 1) { //if arr has only 1 element, tailArray is assigned as an empty array
-    tailArray = [];
-  } else if (arr.length > 1) { //if arr has more then 1 elements, tailArray is assigned as a new array using slice method on arr starting at index 1
-    tailArray = arr.slice(1);
-  }
-  return tailArray; //return tailArray
+  return arr.slice(1);
 };
 
 const words = ["Yo Yo", "Lighthouse", "Labs"];
-tail(words); // no need to capture the return value since we are not checking it
+console.log(tail(words)); // no need to capture the return value since we are not checking it
+const check = ["Do", "A", "4", "Loop"]
+console.log(tail (check));
 assertEqual(words.length, 3); // original array should still have 3 elements!
+assertEqual(check.length, 4); // original array should still have 3 elements!
