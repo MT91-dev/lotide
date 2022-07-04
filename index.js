@@ -16,8 +16,6 @@ const countLetters = require("./countLetters");
 const countOnly = require("./countOnly");
 const letterPositions = require("./letterPositions");
 
-
-
 module.exports = {
   head,
   tail,
