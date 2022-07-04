@@ -1,7 +1,7 @@
 //Function below takes two parameters and checks whether they are the same. Provides with an assertion output based on the two parameters.
-const assertEqual = (actual, expected) => {
-  return (actual === expected ? console.log(`✅ Assertion Passed: ${actual} === ${expected}`) : console.log(`🛑 Assertion Failed: ${actual} !== ${expected}`));
-};
+// const assertEqual = (actual, expected) => {
+//   return (actual === expected ? console.log(`✅ Assertion Passed: ${actual} === ${expected}`) : console.log(`🛑 Assertion Failed: ${actual} !== ${expected}`));
+// };
 
 const eqObjects = (object1, object2) => {
 
@@ -25,31 +25,33 @@ const eqObjects = (object1, object2) => {
   }
 };
 
-const eqArrays = (array1, array2) => {
-  if (array1.length !== array2.length) {
-    return false;
-  }
-  for (let index = 0; index < array1.length; index++) {
-    if (array1[index] !== array2[index]) {
-      return false;
-    }
-  }
-  return true;
-}
+module.exports = eqObjects;
 
-const ab = { a: "1", b: "2" };
-const ba = { b: "2", a: "1" };
-eqObjects(ab, ba); // => true
-assertEqual(eqObjects(ab, ba), true); // => true
+// const eqArrays = (array1, array2) => {
+//   if (array1.length !== array2.length) {
+//     return false;
+//   }
+//   for (let index = 0; index < array1.length; index++) {
+//     if (array1[index] !== array2[index]) {
+//       return false;
+//     }
+//   }
+//   return true;
+// }
+
+// const ab = { a: "1", b: "2" };
+// const ba = { b: "2", a: "1" };
+// eqObjects(ab, ba); // => true
+// assertEqual(eqObjects(ab, ba), true); // => true
 
 
-const abc = { a: "1", b: "2", c: "3" };
-eqObjects(ab, abc); // => false
-assertEqual(eqObjects(ab, abc), false); // => false
+// const abc = { a: "1", b: "2", c: "3" };
+// eqObjects(ab, abc); // => false
+// assertEqual(eqObjects(ab, abc), false); // => false
 
-const cd = { c: "1", d: ["2", 3] };
-const dc = { d: ["2", 3], c: "1" };
-assertEqual(eqObjects(cd, dc), true); // => true
+// const cd = { c: "1", d: ["2", 3] };
+// const dc = { d: ["2", 3], c: "1" };
+// assertEqual(eqObjects(cd, dc), true); // => true
 
-const cd2 = { c: "1", d: ["2", 3, 4] };
-assertEqual(eqObjects(cd, cd2), false); // => false
+// const cd2 = { c: "1", d: ["2", 3, 4] };
+// assertEqual(eqObjects(cd, cd2), false); // => false
