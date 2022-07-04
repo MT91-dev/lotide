@@ -1,7 +1,9 @@
-//Function below takes two parameters and checks whether they are the same. Provides with an assertion output based on the two parameters.
-const assertEqual = function (actual, expected) {
-  return (actual === expected ? console.log(`✅ Assertion Passed: ${actual} === ${expected}`) : console.log(`🛑 Assertion Failed: ${actual} !== ${expected}`));
-};
+// //Function below takes two parameters and checks whether they are the same. Provides with an assertion output based on the two parameters.
+// const assertEqual = function (actual, expected) {
+//   return (actual === expected ? console.log(`✅ Assertion Passed: ${actual} === ${expected}`) : console.log(`🛑 Assertion Failed: ${actual} !== ${expected}`));
+// };
+
+const assertEqual = require("./assertEqual")
 
 //Function below takes an array as variable arr and returns the head of the array
 const head = (arr) => {
@@ -13,6 +15,8 @@ const head = (arr) => {
   return firstElement; //return firstElement
 }
 
-assertEqual(head([5, 6, 7]), 5);
-assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello");
-assertEqual(head([]), 5);
+module.exports = head;
+
+// assertEqual(head([5, 6, 7]), 5);
+// assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello");
+// assertEqual(head([]), 5);
