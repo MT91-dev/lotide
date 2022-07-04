@@ -6,19 +6,19 @@ const middle = (midArr) => {
   let arrayLength = midArr.length;
 
   if (arrayLength > 2 && arrayLength % 2 !== 0) {
-    mid.push(Math.ceil(arrayLength / 2 + 1));
+    mid.push(midArr[Math.ceil(arrayLength / 2) - 1]);
   } else if (arrayLength > 2 && arrayLength % 2 === 0) {
-    mid.push(arrayLength / 2);
-    mid.push(arrayLength / 2 + 1);
+    mid.push(midArr[arrayLength / 2 - 1]);
+    mid.push(midArr[arrayLength / 2]);
   }
   return mid;
 }
 
 module.exports = middle;
 
-// assertArraysEqual(middle([1]), []); // => should PASS
-// assertArraysEqual(middle([1, 2]), []); // => should PASS
-// assertArraysEqual(middle([1, 2, 3]), [2]); // => should PASS
-// assertArraysEqual(middle([1, 2, 3, 4]), [2, 3]); // => should PASS
-// assertArraysEqual(middle([1, 2, 3, 4, 5]), [3]); // => should PASS
-// assertArraysEqual(middle([1, 2, 3, 4, 5, 6]), [3, 4]); // => should PASS
+assertArraysEqual(middle([1]), []); // => should PASS
+assertArraysEqual(middle([1, 2]), []); // => should PASS
+assertArraysEqual(middle([1, 2, 3]), [2]); // => should PASS
+assertArraysEqual(middle([1, 2, 3, 4]), [2, 3]); // => should PASS
+assertArraysEqual(middle([1, 2, 3, 4, 5]), [3]); // => should PASS
+assertArraysEqual(middle([1, 2, 3, 4, 5, 6]), [3, 4]); // => should PASS
